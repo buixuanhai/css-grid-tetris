@@ -1,4 +1,4 @@
-import { createBoard, toGridTemplateArea, renderShape, shapes } from "./App";
+import { createBoard, toGridTemplateArea, renderShape, SHAPES } from "./App";
 describe("createBoard", () => {
   test("should create board", () => {
     expect(createBoard(4, 4)).toEqual([
@@ -22,10 +22,9 @@ describe("toGridTemplateArea", () => {
 describe("renderShape", () => {
   test("render shape", () => {
     const board = createBoard(4, 4);
-    // console.log(toGridTemplateArea(board));
-    expect(renderShape(shapes.SQUARE, board, { x: 0, y: 0 })).toEqual([
+    expect(renderShape(SHAPES.SQUARE, board, { x: 0, y: 0 })).toEqual([
       [".", ".", ".", "."],
-      [".", ".", ".", "."],
+      ["", ".", ".", "."],
       [1, 1, ".", "."],
       [1, 1, ".", "."]
     ]);

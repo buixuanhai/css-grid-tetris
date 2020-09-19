@@ -1,7 +1,7 @@
 import React from "react";
 import { createBoard, toGridTemplateArea } from "./App";
 
-const colors = {
+const COLORS = {
   0: "red",
   1: "yellow",
   2: "green",
@@ -43,7 +43,7 @@ const Board = ({ width, height }) => {
             <div
               key={`${rowIndex}-${cellIndex}`}
               style={{
-                backgroundColor: colors[cell % 4],
+                backgroundColor: COLORS[cell % 4],
                 border: "1px solid black",
                 gridArea: `'${cell}'`
               }}

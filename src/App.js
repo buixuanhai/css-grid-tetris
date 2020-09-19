@@ -7,7 +7,7 @@ export const createBoard = (width, height) => {
     .map(() => Array(width).fill("."));
 };
 
-export const shapes = {
+export const SHAPES = {
   SQUARE: [
     [1, 1],
     [1, 1]
